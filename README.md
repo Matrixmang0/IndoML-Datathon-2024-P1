@@ -87,7 +87,3 @@ Provide instructions on how to use your project. Include examples if possible.
 # Example command to run your project
 python main.py --input data/input_file.csv --output results/output_file.csv
 ```
-
-## Contact
-
-For any questions or inquiries, please contact [Santhosh G S](santhoshgs013@gmail.com).
