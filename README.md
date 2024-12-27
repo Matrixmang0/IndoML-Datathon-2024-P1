@@ -88,14 +88,6 @@ Provide instructions on how to use your project. Include examples if possible.
 python main.py --input data/input_file.csv --output results/output_file.csv
 ```
 
-## Contributing
-
-If you would like to contribute to this project, please fork the repository and submit a pull request.
-
-## License
-
-Include the license under which your project is distributed.
-
 ## Contact
 
 For any questions or inquiries, please contact [Santhosh G S](santhoshgs013@gmail.com).
