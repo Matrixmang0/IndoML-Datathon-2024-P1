@@ -1,0 +1,2677 @@
+Dataset Information:
+Number of Training Datapoints : 443499
+Number of Validation Datapoints : 95035
+
+Training Hyperparameters:
+output_dir: ./tuned_fT5base
+overwrite_output_dir: False
+do_train: False
+do_eval: True
+do_predict: False
+eval_strategy: IntervalStrategy.EPOCH
+prediction_loss_only: False
+per_device_train_batch_size: 16
+per_device_eval_batch_size: 16
+per_gpu_train_batch_size: None
+per_gpu_eval_batch_size: None
+gradient_accumulation_steps: 1
+eval_accumulation_steps: 32
+eval_delay: 0
+torch_empty_cache_steps: None
+learning_rate: 0.02
+weight_decay: 0.01
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1e-08
+max_grad_norm: 1.0
+num_train_epochs: 3
+max_steps: -1
+lr_scheduler_type: SchedulerType.LINEAR
+lr_scheduler_kwargs: {}
+warmup_ratio: 0.0
+warmup_steps: 0
+log_level: passive
+log_level_replica: warning
+log_on_each_node: True
+logging_dir: ./logs
+logging_strategy: IntervalStrategy.STEPS
+logging_first_step: True
+logging_steps: 100
+logging_nan_inf_filter: True
+save_strategy: IntervalStrategy.STEPS
+save_steps: 500
+save_total_limit: 1
+save_safetensors: True
+save_on_each_node: False
+save_only_model: False
+restore_callback_states_from_checkpoint: False
+no_cuda: False
+use_cpu: False
+use_mps_device: False
+seed: 42
+data_seed: None
+jit_mode_eval: False
+use_ipex: False
+bf16: False
+fp16: True
+fp16_opt_level: O1
+half_precision_backend: auto
+bf16_full_eval: False
+fp16_full_eval: False
+tf32: None
+local_rank: 0
+ddp_backend: None
+tpu_num_cores: None
+tpu_metrics_debug: False
+debug: []
+dataloader_drop_last: False
+eval_steps: None
+dataloader_num_workers: 0
+dataloader_prefetch_factor: None
+past_index: -1
+run_name: ./tuned_fT5base
+disable_tqdm: False
+remove_unused_columns: True
+label_names: None
+load_best_model_at_end: False
+metric_for_best_model: None
+greater_is_better: None
+ignore_data_skip: False
+fsdp: []
+fsdp_min_num_params: 0
+fsdp_config: {'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False}
+fsdp_transformer_layer_cls_to_wrap: None
+accelerator_config: AcceleratorConfig(split_batches=False, dispatch_batches=None, even_batches=True, use_seedable_sampler=True, non_blocking=False, gradient_accumulation_kwargs=None, use_configured_state=False)
+deepspeed: None
+label_smoothing_factor: 0.0
+optim: OptimizerNames.ADAMW_TORCH
+optim_args: None
+adafactor: False
+group_by_length: False
+length_column_name: length
+report_to: ['tensorboard']
+ddp_find_unused_parameters: None
+ddp_bucket_cap_mb: None
+ddp_broadcast_buffers: None
+dataloader_pin_memory: True
+dataloader_persistent_workers: False
+skip_memory_metrics: True
+use_legacy_prediction_loop: False
+push_to_hub: False
+resume_from_checkpoint: None
+hub_model_id: None
+hub_strategy: HubStrategy.EVERY_SAVE
+hub_token: None
+hub_private_repo: False
+hub_always_push: False
+gradient_checkpointing: False
+gradient_checkpointing_kwargs: None
+include_inputs_for_metrics: False
+eval_do_concat_batches: True
+fp16_backend: auto
+evaluation_strategy: None
+push_to_hub_model_id: None
+push_to_hub_organization: None
+push_to_hub_token: None
+mp_parameters: 
+auto_find_batch_size: False
+full_determinism: False
+torchdynamo: None
+ray_scope: last
+ddp_timeout: 1800
+torch_compile: False
+torch_compile_backend: None
+torch_compile_mode: None
+dispatch_batches: None
+split_batches: None
+include_tokens_per_second: False
+include_num_input_tokens_seen: False
+neftune_noise_alpha: None
+optim_target_modules: None
+batch_eval_metrics: False
+eval_on_start: False
+eval_use_gather_object: False
+distributed_state: Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+_n_gpu: 2
+__cached__setup_devices: cuda:0
+deepspeed_plugin: None
+
+Training Logs:
+
+Step: 1
+loss: 26.2212
+grad_norm: 5323933.5
+learning_rate: 0.019999518999519
+epoch: 7.215007215007215e-05
+
+Step: 100
+loss: 1.2074
+grad_norm: 36275.3671875
+learning_rate: 0.019951899951899953
+epoch: 0.007215007215007215
+
+Step: 200
+loss: 0.656
+grad_norm: 42530.078125
+learning_rate: 0.019903799903799903
+epoch: 0.01443001443001443
+
+Step: 300
+loss: 0.7907
+grad_norm: 327186.8125
+learning_rate: 0.019855699855699856
+epoch: 0.021645021645021644
+
+Step: 400
+loss: 1.1233
+grad_norm: 144540.46875
+learning_rate: 0.01980759980759981
+epoch: 0.02886002886002886
+
+Step: 500
+loss: 0.9654
+grad_norm: 73057.1484375
+learning_rate: 0.019759499759499758
+epoch: 0.03607503607503607
+
+Step: 600
+loss: 1.0009
+grad_norm: 42994.625
+learning_rate: 0.01971139971139971
+epoch: 0.04329004329004329
+
+Step: 700
+loss: 0.9493
+grad_norm: 51563.22265625
+learning_rate: 0.019663299663299664
+epoch: 0.050505050505050504
+
+Step: 800
+loss: 0.9191
+grad_norm: 133501.828125
+learning_rate: 0.019615199615199613
+epoch: 0.05772005772005772
+
+Step: 900
+loss: 0.9028
+grad_norm: 12669.7998046875
+learning_rate: 0.019567099567099566
+epoch: 0.06493506493506493
+
+Step: 1000
+loss: 0.8469
+grad_norm: 13240.7509765625
+learning_rate: 0.01951899951899952
+epoch: 0.07215007215007214
+
+Step: 1100
+loss: 0.8237
+grad_norm: 12878.013671875
+learning_rate: 0.01947089947089947
+epoch: 0.07936507936507936
+
+Step: 1200
+loss: 0.8264
+grad_norm: 14410.158203125
+learning_rate: 0.019422799422799425
+epoch: 0.08658008658008658
+
+Step: 1300
+loss: 0.8282
+grad_norm: 171558.9375
+learning_rate: 0.019374699374699374
+epoch: 0.09379509379509379
+
+Step: 1400
+loss: 0.8183
+grad_norm: 10701.0390625
+learning_rate: 0.019326599326599327
+epoch: 0.10101010101010101
+
+Step: 1500
+loss: 0.8424
+grad_norm: 12213.2958984375
+learning_rate: 0.01927849927849928
+epoch: 0.10822510822510822
+
+Step: 1600
+loss: 0.8721
+grad_norm: 25278.587890625
+learning_rate: 0.019230399230399233
+epoch: 0.11544011544011544
+
+Step: 1700
+loss: 0.8192
+grad_norm: 68051.203125
+learning_rate: 0.019182299182299183
+epoch: 0.12265512265512266
+
+Step: 1800
+loss: 0.8289
+grad_norm: 493355.5
+learning_rate: 0.019134199134199135
+epoch: 0.12987012987012986
+
+Step: 1900
+loss: 0.8435
+grad_norm: 159342.046875
+learning_rate: 0.01908609908609909
+epoch: 0.1370851370851371
+
+Step: 2000
+loss: 0.836
+grad_norm: 9760.5361328125
+learning_rate: 0.019037999037999038
+epoch: 0.1443001443001443
+
+Step: 2100
+loss: 0.815
+grad_norm: 117469.59375
+learning_rate: 0.01898989898989899
+epoch: 0.15151515151515152
+
+Step: 2200
+loss: 0.8491
+grad_norm: 11054.7119140625
+learning_rate: 0.018941798941798944
+epoch: 0.15873015873015872
+
+Step: 2300
+loss: 0.8001
+grad_norm: 25738.6328125
+learning_rate: 0.018893698893698893
+epoch: 0.16594516594516595
+
+Step: 2400
+loss: 0.7927
+grad_norm: 17757.943359375
+learning_rate: 0.018845598845598846
+epoch: 0.17316017316017315
+
+Step: 2500
+loss: 0.7778
+grad_norm: 99080.890625
+learning_rate: 0.0187974987974988
+epoch: 0.18037518037518038
+
+Step: 2600
+loss: 0.7748
+grad_norm: 15443.3544921875
+learning_rate: 0.01874939874939875
+epoch: 0.18759018759018758
+
+Step: 2700
+loss: 0.7833
+grad_norm: 6077.38671875
+learning_rate: 0.0187012987012987
+epoch: 0.19480519480519481
+
+Step: 2800
+loss: 0.7752
+grad_norm: 40269.91796875
+learning_rate: 0.018653198653198654
+epoch: 0.20202020202020202
+
+Step: 2900
+loss: 0.8004
+grad_norm: 57574.23828125
+learning_rate: 0.018605098605098604
+epoch: 0.20923520923520925
+
+Step: 3000
+loss: 0.7818
+grad_norm: 41036.92578125
+learning_rate: 0.018556998556998557
+epoch: 0.21645021645021645
+
+Step: 3100
+loss: 0.7905
+grad_norm: 1624719.75
+learning_rate: 0.01850889850889851
+epoch: 0.22366522366522368
+
+Step: 3200
+loss: 0.7697
+grad_norm: 14695.5048828125
+learning_rate: 0.01846079846079846
+epoch: 0.23088023088023088
+
+Step: 3300
+loss: 0.7902
+grad_norm: 6347.0283203125
+learning_rate: 0.018412698412698412
+epoch: 0.23809523809523808
+
+Step: 3400
+loss: 0.7675
+grad_norm: 9328.5146484375
+learning_rate: 0.018364598364598365
+epoch: 0.2453102453102453
+
+Step: 3500
+loss: 0.8045
+grad_norm: 15510.958984375
+learning_rate: 0.018316498316498318
+epoch: 0.25252525252525254
+
+Step: 3600
+loss: 0.8
+grad_norm: 34197.96484375
+learning_rate: 0.01826839826839827
+epoch: 0.2597402597402597
+
+Step: 3700
+loss: 0.779
+grad_norm: 8193.021484375
+learning_rate: 0.01822029822029822
+epoch: 0.26695526695526695
+
+Step: 3800
+loss: 0.7749
+grad_norm: 17420.31640625
+learning_rate: 0.018172198172198173
+epoch: 0.2741702741702742
+
+Step: 3900
+loss: 0.7733
+grad_norm: 64818.234375
+learning_rate: 0.018124098124098126
+epoch: 0.2813852813852814
+
+Step: 4000
+loss: 0.7842
+grad_norm: 20831.6875
+learning_rate: 0.018075998075998075
+epoch: 0.2886002886002886
+
+Step: 4100
+loss: 0.7879
+grad_norm: 18485.138671875
+learning_rate: 0.018027898027898028
+epoch: 0.2958152958152958
+
+Step: 4200
+loss: 0.7906
+grad_norm: 12256.5322265625
+learning_rate: 0.01797979797979798
+epoch: 0.30303030303030304
+
+Step: 4300
+loss: 0.8153
+grad_norm: 178668.59375
+learning_rate: 0.017931697931697934
+epoch: 0.31024531024531027
+
+Step: 4400
+loss: 0.8226
+grad_norm: 241576.40625
+learning_rate: 0.017883597883597883
+epoch: 0.31746031746031744
+
+Step: 4500
+loss: 0.7862
+grad_norm: 7545.435546875
+learning_rate: 0.017835497835497836
+epoch: 0.3246753246753247
+
+Step: 4600
+loss: 0.7472
+grad_norm: 17259.099609375
+learning_rate: 0.01778739778739779
+epoch: 0.3318903318903319
+
+Step: 4700
+loss: 0.7686
+grad_norm: 10537.119140625
+learning_rate: 0.01773929773929774
+epoch: 0.33910533910533913
+
+Step: 4800
+loss: 0.8113
+grad_norm: 4615047.5
+learning_rate: 0.01769119769119769
+epoch: 0.3463203463203463
+
+Step: 4900
+loss: 0.8121
+grad_norm: 10508.775390625
+learning_rate: 0.017643097643097645
+epoch: 0.35353535353535354
+
+Step: 5000
+loss: 0.7817
+grad_norm: 33224.04296875
+learning_rate: 0.017594997594997594
+epoch: 0.36075036075036077
+
+Step: 5100
+loss: 0.7811
+grad_norm: 30380.81640625
+learning_rate: 0.017546897546897547
+epoch: 0.36796536796536794
+
+Step: 5200
+loss: 0.8036
+grad_norm: 8844.5146484375
+learning_rate: 0.0174987974987975
+epoch: 0.37518037518037517
+
+Step: 5300
+loss: 0.8007
+grad_norm: 5406.64404296875
+learning_rate: 0.01745069745069745
+epoch: 0.3823953823953824
+
+Step: 5400
+loss: 0.7773
+grad_norm: 18476.50390625
+learning_rate: 0.017402597402597402
+epoch: 0.38961038961038963
+
+Step: 5500
+loss: 0.7746
+grad_norm: 13353.6357421875
+learning_rate: 0.017354497354497355
+epoch: 0.3968253968253968
+
+Step: 5600
+loss: 0.7665
+grad_norm: 10073.962890625
+learning_rate: 0.017306397306397305
+epoch: 0.40404040404040403
+
+Step: 5700
+loss: 0.7507
+grad_norm: 700713.3125
+learning_rate: 0.01725829725829726
+epoch: 0.41125541125541126
+
+Step: 5800
+loss: 0.7636
+grad_norm: 11700.3408203125
+learning_rate: 0.01721019721019721
+epoch: 0.4184704184704185
+
+Step: 5900
+loss: 0.7593
+grad_norm: 7577.09765625
+learning_rate: 0.017162097162097163
+epoch: 0.42568542568542567
+
+Step: 6000
+loss: 0.7626
+grad_norm: 6963.83544921875
+learning_rate: 0.017113997113997116
+epoch: 0.4329004329004329
+
+Step: 6100
+loss: 0.7946
+grad_norm: 260684.90625
+learning_rate: 0.017065897065897066
+epoch: 0.4401154401154401
+
+Step: 6200
+loss: 0.7721
+grad_norm: 104526.2265625
+learning_rate: 0.01701779701779702
+epoch: 0.44733044733044736
+
+Step: 6300
+loss: 0.7741
+grad_norm: 13113.1435546875
+learning_rate: 0.01696969696969697
+epoch: 0.45454545454545453
+
+Step: 6400
+loss: 0.7776
+grad_norm: 97461.546875
+learning_rate: 0.01692159692159692
+epoch: 0.46176046176046176
+
+Step: 6500
+loss: 0.8008
+grad_norm: 6075.47021484375
+learning_rate: 0.016873496873496874
+epoch: 0.468975468975469
+
+Step: 6600
+loss: 0.7772
+grad_norm: 19493.51171875
+learning_rate: 0.016825396825396827
+epoch: 0.47619047619047616
+
+Step: 6700
+loss: 0.7734
+grad_norm: 10286.1748046875
+learning_rate: 0.016777296777296776
+epoch: 0.4834054834054834
+
+Step: 6800
+loss: 0.7697
+grad_norm: 15256.0654296875
+learning_rate: 0.01672919672919673
+epoch: 0.4906204906204906
+
+Step: 6900
+loss: 0.7497
+grad_norm: 15302.513671875
+learning_rate: 0.016681096681096682
+epoch: 0.49783549783549785
+
+Step: 7000
+loss: 0.7303
+grad_norm: 7772.5986328125
+learning_rate: 0.01663299663299663
+epoch: 0.5050505050505051
+
+Step: 7100
+loss: 0.7521
+grad_norm: 6093.85205078125
+learning_rate: 0.016584896584896584
+epoch: 0.5122655122655123
+
+Step: 7200
+loss: 0.752
+grad_norm: 9178.68359375
+learning_rate: 0.016536796536796537
+epoch: 0.5194805194805194
+
+Step: 7300
+loss: 0.7487
+grad_norm: 21158.98828125
+learning_rate: 0.01648869648869649
+epoch: 0.5266955266955267
+
+Step: 7400
+loss: 0.7319
+grad_norm: 10256.3828125
+learning_rate: 0.01644059644059644
+epoch: 0.5339105339105339
+
+Step: 7500
+loss: 0.7323
+grad_norm: 9886.037109375
+learning_rate: 0.016392496392496392
+epoch: 0.5411255411255411
+
+Step: 7600
+loss: 0.7412
+grad_norm: 9934.455078125
+learning_rate: 0.016344396344396345
+epoch: 0.5483405483405484
+
+Step: 7700
+loss: 0.7291
+grad_norm: 44142.55859375
+learning_rate: 0.016296296296296295
+epoch: 0.5555555555555556
+
+Step: 7800
+loss: 0.7244
+grad_norm: 11168.9189453125
+learning_rate: 0.016248196248196248
+epoch: 0.5627705627705628
+
+Step: 7900
+loss: 0.709
+grad_norm: 20480.421875
+learning_rate: 0.0162000962000962
+epoch: 0.56998556998557
+
+Step: 8000
+loss: 0.7128
+grad_norm: 6749.38232421875
+learning_rate: 0.016151996151996154
+epoch: 0.5772005772005772
+
+Step: 8100
+loss: 0.717
+grad_norm: 467074.90625
+learning_rate: 0.016103896103896106
+epoch: 0.5844155844155844
+
+Step: 8200
+loss: 0.747
+grad_norm: 39939.41015625
+learning_rate: 0.016055796055796056
+epoch: 0.5916305916305916
+
+Step: 8300
+loss: 0.7252
+grad_norm: 5021.13720703125
+learning_rate: 0.01600769600769601
+epoch: 0.5988455988455988
+
+Step: 8400
+loss: 0.7316
+grad_norm: 10261.71484375
+learning_rate: 0.015959595959595962
+epoch: 0.6060606060606061
+
+Step: 8500
+loss: 0.7632
+grad_norm: 9845.5869140625
+learning_rate: 0.01591149591149591
+epoch: 0.6132756132756133
+
+Step: 8600
+loss: 0.7504
+grad_norm: 11040.154296875
+learning_rate: 0.015863395863395864
+epoch: 0.6204906204906205
+
+Step: 8700
+loss: 0.7345
+grad_norm: 75575.953125
+learning_rate: 0.015815295815295817
+epoch: 0.6277056277056277
+
+Step: 8800
+loss: 0.7361
+grad_norm: 4571.8740234375
+learning_rate: 0.015767195767195766
+epoch: 0.6349206349206349
+
+Step: 8900
+loss: 0.728
+grad_norm: 11786.5654296875
+learning_rate: 0.01571909571909572
+epoch: 0.6421356421356421
+
+Step: 9000
+loss: 0.7514
+grad_norm: 11637.65234375
+learning_rate: 0.015670995670995672
+epoch: 0.6493506493506493
+
+Step: 9100
+loss: 0.7529
+grad_norm: 7568.107421875
+learning_rate: 0.015622895622895623
+epoch: 0.6565656565656566
+
+Step: 9200
+loss: 0.7412
+grad_norm: 8354.6962890625
+learning_rate: 0.015574795574795575
+epoch: 0.6637806637806638
+
+Step: 9300
+loss: 0.7299
+grad_norm: 9250.369140625
+learning_rate: 0.015526695526695528
+epoch: 0.670995670995671
+
+Step: 9400
+loss: 0.7148
+grad_norm: 5639.50439453125
+learning_rate: 0.015478595478595479
+epoch: 0.6782106782106783
+
+Step: 9500
+loss: 0.7231
+grad_norm: 10413.33203125
+learning_rate: 0.01543049543049543
+epoch: 0.6854256854256854
+
+Step: 9600
+loss: 0.7362
+grad_norm: 7163.05810546875
+learning_rate: 0.015382395382395383
+epoch: 0.6926406926406926
+
+Step: 9700
+loss: 0.7148
+grad_norm: 7396.42431640625
+learning_rate: 0.015334295334295334
+epoch: 0.6998556998556998
+
+Step: 9800
+loss: 0.7252
+grad_norm: 6090.64306640625
+learning_rate: 0.015286195286195285
+epoch: 0.7070707070707071
+
+Step: 9900
+loss: 0.72
+grad_norm: 5145.08447265625
+learning_rate: 0.015238095238095238
+epoch: 0.7142857142857143
+
+Step: 10000
+loss: 0.726
+grad_norm: 12513.36328125
+learning_rate: 0.01518999518999519
+epoch: 0.7215007215007215
+
+Step: 10100
+loss: 0.716
+grad_norm: 6203.8876953125
+learning_rate: 0.01514189514189514
+epoch: 0.7287157287157288
+
+Step: 10200
+loss: 0.7093
+grad_norm: 9391.7314453125
+learning_rate: 0.015093795093795095
+epoch: 0.7359307359307359
+
+Step: 10300
+loss: 0.717
+grad_norm: 8365.212890625
+learning_rate: 0.015045695045695046
+epoch: 0.7431457431457431
+
+Step: 10400
+loss: 0.7593
+grad_norm: 12167.171875
+learning_rate: 0.014997594997595
+epoch: 0.7503607503607503
+
+Step: 10500
+loss: 0.7752
+grad_norm: 11663.16015625
+learning_rate: 0.01494949494949495
+epoch: 0.7575757575757576
+
+Step: 10600
+loss: 0.7691
+grad_norm: 15175.41796875
+learning_rate: 0.014901394901394902
+epoch: 0.7647907647907648
+
+Step: 10700
+loss: 0.7678
+grad_norm: 6100.77099609375
+learning_rate: 0.014853294853294854
+epoch: 0.772005772005772
+
+Step: 10800
+loss: 0.7579
+grad_norm: 6379.427734375
+learning_rate: 0.014805194805194806
+epoch: 0.7792207792207793
+
+Step: 10900
+loss: 0.7626
+grad_norm: 8721.5625
+learning_rate: 0.014757094757094759
+epoch: 0.7864357864357865
+
+Step: 11000
+loss: 0.7663
+grad_norm: 9048.251953125
+learning_rate: 0.01470899470899471
+epoch: 0.7936507936507936
+
+Step: 11100
+loss: 0.7808
+grad_norm: 14579.8505859375
+learning_rate: 0.014660894660894661
+epoch: 0.8008658008658008
+
+Step: 11200
+loss: 0.7665
+grad_norm: 21462.59765625
+learning_rate: 0.014612794612794614
+epoch: 0.8080808080808081
+
+Step: 11300
+loss: 0.7402
+grad_norm: 7061.86767578125
+learning_rate: 0.014564694564694565
+epoch: 0.8152958152958153
+
+Step: 11400
+loss: 0.7531
+grad_norm: 20853.04296875
+learning_rate: 0.014516594516594516
+epoch: 0.8225108225108225
+
+Step: 11500
+loss: 0.7648
+grad_norm: 8319.0166015625
+learning_rate: 0.014468494468494469
+epoch: 0.8297258297258298
+
+Step: 11600
+loss: 0.7457
+grad_norm: 353088.59375
+learning_rate: 0.01442039442039442
+epoch: 0.836940836940837
+
+Step: 11700
+loss: 0.7387
+grad_norm: 7094.49609375
+learning_rate: 0.014372294372294371
+epoch: 0.8441558441558441
+
+Step: 11800
+loss: 0.736
+grad_norm: 16137.474609375
+learning_rate: 0.014324194324194324
+epoch: 0.8513708513708513
+
+Step: 11900
+loss: 0.7303
+grad_norm: 9821.14453125
+learning_rate: 0.014276094276094276
+epoch: 0.8585858585858586
+
+Step: 12000
+loss: 0.7358
+grad_norm: 104389.2265625
+learning_rate: 0.014227994227994228
+epoch: 0.8658008658008658
+
+Step: 12100
+loss: 0.7304
+grad_norm: 16662.5703125
+learning_rate: 0.01417989417989418
+epoch: 0.873015873015873
+
+Step: 12200
+loss: 0.7612
+grad_norm: 7911.69091796875
+learning_rate: 0.01413179413179413
+epoch: 0.8802308802308803
+
+Step: 12300
+loss: 0.7635
+grad_norm: 4370.2998046875
+learning_rate: 0.014083694083694084
+epoch: 0.8874458874458875
+
+Step: 12400
+loss: 0.7613
+grad_norm: 22105.494140625
+learning_rate: 0.014035594035594035
+epoch: 0.8946608946608947
+
+Step: 12500
+loss: 0.8383
+grad_norm: 8575.1318359375
+learning_rate: 0.01398749398749399
+epoch: 0.9018759018759018
+
+Step: 12600
+loss: 0.7771
+grad_norm: 17935.357421875
+learning_rate: 0.01393939393939394
+epoch: 0.9090909090909091
+
+Step: 12700
+loss: 0.7749
+grad_norm: 5726.99853515625
+learning_rate: 0.013891293891293892
+epoch: 0.9163059163059163
+
+Step: 12800
+loss: 0.7752
+grad_norm: 5718.43896484375
+learning_rate: 0.013843193843193845
+epoch: 0.9235209235209235
+
+Step: 12900
+loss: 0.7538
+grad_norm: 51636.11328125
+learning_rate: 0.013795093795093796
+epoch: 0.9307359307359307
+
+Step: 13000
+loss: 0.7552
+grad_norm: 11744.484375
+learning_rate: 0.013746993746993747
+epoch: 0.937950937950938
+
+Step: 13100
+loss: 0.7589
+grad_norm: 6887.822265625
+learning_rate: 0.0136988936988937
+epoch: 0.9451659451659452
+
+Step: 13200
+loss: 0.7725
+grad_norm: 9764.412109375
+learning_rate: 0.013650793650793651
+epoch: 0.9523809523809523
+
+Step: 13300
+loss: 0.799
+grad_norm: 18937.7890625
+learning_rate: 0.013602693602693602
+epoch: 0.9595959595959596
+
+Step: 13400
+loss: 0.7633
+grad_norm: 3892.244873046875
+learning_rate: 0.013554593554593555
+epoch: 0.9668109668109668
+
+Step: 13500
+loss: 0.7489
+grad_norm: 77752.71875
+learning_rate: 0.013506493506493506
+epoch: 0.974025974025974
+
+Step: 13600
+loss: 0.7414
+grad_norm: 10096.7333984375
+learning_rate: 0.01345839345839346
+epoch: 0.9812409812409812
+
+Step: 13700
+loss: 0.7361
+grad_norm: 93921.2578125
+learning_rate: 0.01341029341029341
+epoch: 0.9884559884559885
+
+Step: 13800
+loss: 0.7428
+grad_norm: 279767.875
+learning_rate: 0.013362193362193362
+epoch: 0.9956709956709957
+
+Step: 13860
+eval_loss: 0.6122184991836548
+eval_runtime: 387.1851
+eval_samples_per_second: 245.451
+eval_steps_per_second: 7.671
+epoch: 1.0
+
+Step: 13900
+loss: 0.7097
+grad_norm: 3976.4990234375
+learning_rate: 0.013314093314093315
+epoch: 1.002886002886003
+
+Step: 14000
+loss: 0.7103
+grad_norm: 1162173.875
+learning_rate: 0.013265993265993266
+epoch: 1.0101010101010102
+
+Step: 14100
+loss: 0.721
+grad_norm: 16852.125
+learning_rate: 0.013217893217893217
+epoch: 1.0173160173160174
+
+Step: 14200
+loss: 0.7266
+grad_norm: 165953.796875
+learning_rate: 0.01316979316979317
+epoch: 1.0245310245310246
+
+Step: 14300
+loss: 0.7206
+grad_norm: 4817.78955078125
+learning_rate: 0.013121693121693121
+epoch: 1.0317460317460316
+
+Step: 14400
+loss: 0.7335
+grad_norm: 7084.44384765625
+learning_rate: 0.013073593073593072
+epoch: 1.0389610389610389
+
+Step: 14500
+loss: 0.7388
+grad_norm: 27356.205078125
+learning_rate: 0.013025493025493025
+epoch: 1.046176046176046
+
+Step: 14600
+loss: 0.7277
+grad_norm: 6276.18603515625
+learning_rate: 0.012977392977392976
+epoch: 1.0533910533910533
+
+Step: 14700
+loss: 0.7296
+grad_norm: 63016.29296875
+learning_rate: 0.012929292929292931
+epoch: 1.0606060606060606
+
+Step: 14800
+loss: 0.7467
+grad_norm: 44110.9375
+learning_rate: 0.012881192881192882
+epoch: 1.0678210678210678
+
+Step: 14900
+loss: 0.7361
+grad_norm: 7315.3388671875
+learning_rate: 0.012833092833092835
+epoch: 1.075036075036075
+
+Step: 15000
+loss: 0.7227
+grad_norm: 157629.1875
+learning_rate: 0.012784992784992786
+epoch: 1.0822510822510822
+
+Step: 15100
+loss: 0.7152
+grad_norm: 7574.16943359375
+learning_rate: 0.012736892736892737
+epoch: 1.0894660894660895
+
+Step: 15200
+loss: 0.7142
+grad_norm: 4736.43603515625
+learning_rate: 0.01268879268879269
+epoch: 1.0966810966810967
+
+Step: 15300
+loss: 0.7169
+grad_norm: 6799.3154296875
+learning_rate: 0.012640692640692642
+epoch: 1.103896103896104
+
+Step: 15400
+loss: 0.7205
+grad_norm: 7491.7197265625
+learning_rate: 0.012592592592592593
+epoch: 1.1111111111111112
+
+Step: 15500
+loss: 0.7365
+grad_norm: 11218.9599609375
+learning_rate: 0.012544492544492546
+epoch: 1.1183261183261184
+
+Step: 15600
+loss: 0.7733
+grad_norm: 9754.05078125
+learning_rate: 0.012496392496392497
+epoch: 1.1255411255411256
+
+Step: 15700
+loss: 0.7554
+grad_norm: 5366.6572265625
+learning_rate: 0.012448292448292448
+epoch: 1.1327561327561328
+
+Step: 15800
+loss: 0.7357
+grad_norm: 6735.302734375
+learning_rate: 0.012400192400192401
+epoch: 1.13997113997114
+
+Step: 15900
+loss: 0.7213
+grad_norm: 7279.18994140625
+learning_rate: 0.012352092352092352
+epoch: 1.1471861471861473
+
+Step: 16000
+loss: 0.7112
+grad_norm: 11562.30078125
+learning_rate: 0.012303992303992303
+epoch: 1.1544011544011543
+
+Step: 16100
+loss: 0.7222
+grad_norm: 6951.48876953125
+learning_rate: 0.012255892255892256
+epoch: 1.1616161616161615
+
+Step: 16200
+loss: 0.7223
+grad_norm: 176315.6875
+learning_rate: 0.012207792207792207
+epoch: 1.1688311688311688
+
+Step: 16300
+loss: 0.7005
+grad_norm: 13827.099609375
+learning_rate: 0.01215969215969216
+epoch: 1.176046176046176
+
+Step: 16400
+loss: 0.7124
+grad_norm: 7338.177734375
+learning_rate: 0.012111592111592111
+epoch: 1.1832611832611832
+
+Step: 16500
+loss: 0.7073
+grad_norm: 8742.1982421875
+learning_rate: 0.012063492063492063
+epoch: 1.1904761904761905
+
+Step: 16600
+loss: 0.728
+grad_norm: 3629.8818359375
+learning_rate: 0.012015392015392016
+epoch: 1.1976911976911977
+
+Step: 16700
+loss: 0.7091
+grad_norm: 5046.9873046875
+learning_rate: 0.011967291967291967
+epoch: 1.204906204906205
+
+Step: 16800
+loss: 0.7051
+grad_norm: 44179212.0
+learning_rate: 0.011919191919191918
+epoch: 1.2121212121212122
+
+Step: 16900
+loss: 0.6965
+grad_norm: 4326.5302734375
+learning_rate: 0.01187109187109187
+epoch: 1.2193362193362194
+
+Step: 17000
+loss: 0.7003
+grad_norm: 15067.0234375
+learning_rate: 0.011822991822991824
+epoch: 1.2265512265512266
+
+Step: 17100
+loss: 0.7079
+grad_norm: 6386.9013671875
+learning_rate: 0.011774891774891777
+epoch: 1.2337662337662338
+
+Step: 17200
+loss: 0.72
+grad_norm: 6211.17626953125
+learning_rate: 0.011726791726791728
+epoch: 1.240981240981241
+
+Step: 17300
+loss: 0.7269
+grad_norm: 19352.646484375
+learning_rate: 0.011678691678691679
+epoch: 1.248196248196248
+
+Step: 17400
+loss: 0.725
+grad_norm: 5857.0791015625
+learning_rate: 0.011630591630591632
+epoch: 1.2554112554112553
+
+Step: 17500
+loss: 0.7115
+grad_norm: 6390.40576171875
+learning_rate: 0.011582491582491583
+epoch: 1.2626262626262625
+
+Step: 17600
+loss: 0.7322
+grad_norm: 10975.294921875
+learning_rate: 0.011534391534391534
+epoch: 1.2698412698412698
+
+Step: 17700
+loss: 0.7305
+grad_norm: 21070.611328125
+learning_rate: 0.011486291486291487
+epoch: 1.277056277056277
+
+Step: 17800
+loss: 0.7482
+grad_norm: 9991.7958984375
+learning_rate: 0.011438191438191438
+epoch: 1.2842712842712842
+
+Step: 17900
+loss: 0.7329
+grad_norm: 7302.44580078125
+learning_rate: 0.011390091390091391
+epoch: 1.2914862914862915
+
+Step: 18000
+loss: 0.7394
+grad_norm: 14085.150390625
+learning_rate: 0.011341991341991342
+epoch: 1.2987012987012987
+
+Step: 18100
+loss: 0.7277
+grad_norm: 25197.16015625
+learning_rate: 0.011293891293891294
+epoch: 1.305916305916306
+
+Step: 18200
+loss: 0.7605
+grad_norm: 55079.94921875
+learning_rate: 0.011245791245791247
+epoch: 1.3131313131313131
+
+Step: 18300
+loss: 0.7415
+grad_norm: 14586.3701171875
+learning_rate: 0.011197691197691198
+epoch: 1.3203463203463204
+
+Step: 18400
+loss: 0.7325
+grad_norm: 7438.5576171875
+learning_rate: 0.011149591149591149
+epoch: 1.3275613275613276
+
+Step: 18500
+loss: 0.742
+grad_norm: 5728.19140625
+learning_rate: 0.011101491101491102
+epoch: 1.3347763347763348
+
+Step: 18600
+loss: 0.7362
+grad_norm: 6148.361328125
+learning_rate: 0.011053391053391053
+epoch: 1.341991341991342
+
+Step: 18700
+loss: 0.7275
+grad_norm: 6245.4814453125
+learning_rate: 0.011005291005291004
+epoch: 1.3492063492063493
+
+Step: 18800
+loss: 0.7347
+grad_norm: 6819.69140625
+learning_rate: 0.010957190957190957
+epoch: 1.3564213564213565
+
+Step: 18900
+loss: 0.7171
+grad_norm: 254770.40625
+learning_rate: 0.010909090909090908
+epoch: 1.3636363636363638
+
+Step: 19000
+loss: 0.7218
+grad_norm: 7554.3154296875
+learning_rate: 0.010860990860990861
+epoch: 1.370851370851371
+
+Step: 19100
+loss: 0.7125
+grad_norm: 6666.86083984375
+learning_rate: 0.010812890812890812
+epoch: 1.378066378066378
+
+Step: 19200
+loss: 0.7261
+grad_norm: 27684.107421875
+learning_rate: 0.010764790764790763
+epoch: 1.3852813852813852
+
+Step: 19300
+loss: 0.7197
+grad_norm: 18760.3359375
+learning_rate: 0.010716690716690718
+epoch: 1.3924963924963925
+
+Step: 19400
+loss: 0.7089
+grad_norm: 7114.7265625
+learning_rate: 0.01066859066859067
+epoch: 1.3997113997113997
+
+Step: 19500
+loss: 0.712
+grad_norm: 8018.30322265625
+learning_rate: 0.010620490620490622
+epoch: 1.406926406926407
+
+Step: 19600
+loss: 0.7007
+grad_norm: 11333.9013671875
+learning_rate: 0.010572390572390573
+epoch: 1.4141414141414141
+
+Step: 19700
+loss: 0.6928
+grad_norm: 37963.31640625
+learning_rate: 0.010524290524290525
+epoch: 1.4213564213564214
+
+Step: 19800
+loss: 0.6985
+grad_norm: 12270.7421875
+learning_rate: 0.010476190476190477
+epoch: 1.4285714285714286
+
+Step: 19900
+loss: 0.6996
+grad_norm: 5444.4462890625
+learning_rate: 0.010428090428090429
+epoch: 1.4357864357864358
+
+Step: 20000
+loss: 0.688
+grad_norm: 44761.5546875
+learning_rate: 0.01037999037999038
+epoch: 1.443001443001443
+
+Step: 20100
+loss: 0.704
+grad_norm: 35957.015625
+learning_rate: 0.010331890331890333
+epoch: 1.4502164502164503
+
+Step: 20200
+loss: 0.7002
+grad_norm: 5325.224609375
+learning_rate: 0.010283790283790284
+epoch: 1.4574314574314573
+
+Step: 20300
+loss: 0.7059
+grad_norm: 85726.7109375
+learning_rate: 0.010235690235690235
+epoch: 1.4646464646464645
+
+Step: 20400
+loss: 0.7322
+grad_norm: 5374.296875
+learning_rate: 0.010187590187590188
+epoch: 1.4718614718614718
+
+Step: 20500
+loss: 0.7388
+grad_norm: 6226.74755859375
+learning_rate: 0.01013949013949014
+epoch: 1.479076479076479
+
+Step: 20600
+loss: 0.7302
+grad_norm: 9529.9921875
+learning_rate: 0.010091390091390092
+epoch: 1.4862914862914862
+
+Step: 20700
+loss: 0.7117
+grad_norm: 19316.62109375
+learning_rate: 0.010043290043290043
+epoch: 1.4935064935064934
+
+Step: 20800
+loss: 0.7072
+grad_norm: 1856751.125
+learning_rate: 0.009995189995189994
+epoch: 1.5007215007215007
+
+Step: 20900
+loss: 0.7194
+grad_norm: 10623.2666015625
+learning_rate: 0.009947089947089947
+epoch: 1.507936507936508
+
+Step: 21000
+loss: 0.7243
+grad_norm: 13829.150390625
+learning_rate: 0.0098989898989899
+epoch: 1.5151515151515151
+
+Step: 21100
+loss: 0.7041
+grad_norm: 4609.7353515625
+learning_rate: 0.009850889850889851
+epoch: 1.5223665223665224
+
+Step: 21200
+loss: 0.7088
+grad_norm: 5478.79150390625
+learning_rate: 0.009802789802789803
+epoch: 1.5295815295815296
+
+Step: 21300
+loss: 0.717
+grad_norm: 6353.8408203125
+learning_rate: 0.009754689754689756
+epoch: 1.5367965367965368
+
+Step: 21400
+loss: 0.7405
+grad_norm: 5154.58984375
+learning_rate: 0.009706589706589707
+epoch: 1.544011544011544
+
+Step: 21500
+loss: 0.7248
+grad_norm: 6130.64501953125
+learning_rate: 0.009658489658489658
+epoch: 1.5512265512265513
+
+Step: 21600
+loss: 0.7221
+grad_norm: 8144.6416015625
+learning_rate: 0.00961038961038961
+epoch: 1.5584415584415585
+
+Step: 21700
+loss: 0.7173
+grad_norm: 7003.63916015625
+learning_rate: 0.009562289562289562
+epoch: 1.5656565656565657
+
+Step: 21800
+loss: 0.759
+grad_norm: 6301.208984375
+learning_rate: 0.009514189514189515
+epoch: 1.572871572871573
+
+Step: 21900
+loss: 0.7582
+grad_norm: 8333.0263671875
+learning_rate: 0.009466089466089466
+epoch: 1.5800865800865802
+
+Step: 22000
+loss: 0.7646
+grad_norm: 493204.5625
+learning_rate: 0.009417989417989417
+epoch: 1.5873015873015874
+
+Step: 22100
+loss: 0.7472
+grad_norm: 11129.8544921875
+learning_rate: 0.00936988936988937
+epoch: 1.5945165945165947
+
+Step: 22200
+loss: 0.7371
+grad_norm: 5042.51171875
+learning_rate: 0.009321789321789323
+epoch: 1.601731601731602
+
+Step: 22300
+loss: 0.7546
+grad_norm: 7697.6484375
+learning_rate: 0.009273689273689274
+epoch: 1.608946608946609
+
+Step: 22400
+loss: 0.7502
+grad_norm: 8202.9951171875
+learning_rate: 0.009225589225589225
+epoch: 1.6161616161616161
+
+Step: 22500
+loss: 0.7562
+grad_norm: 17566.365234375
+learning_rate: 0.009177489177489178
+epoch: 1.6233766233766234
+
+Step: 22600
+loss: 0.7446
+grad_norm: 5551.06640625
+learning_rate: 0.00912938912938913
+epoch: 1.6305916305916306
+
+Step: 22700
+loss: 0.8106
+grad_norm: 9834.8291015625
+learning_rate: 0.00908128908128908
+epoch: 1.6378066378066378
+
+Step: 22800
+loss: 0.7871
+grad_norm: 4974.431640625
+learning_rate: 0.009033189033189034
+epoch: 1.645021645021645
+
+Step: 22900
+loss: 0.7729
+grad_norm: 7651.39453125
+learning_rate: 0.008985088985088985
+epoch: 1.6522366522366523
+
+Step: 23000
+loss: 0.7469
+grad_norm: 5355.8740234375
+learning_rate: 0.008936988936988936
+epoch: 1.6594516594516593
+
+Step: 23100
+loss: 0.7283
+grad_norm: 17123.08203125
+learning_rate: 0.008888888888888889
+epoch: 1.6666666666666665
+
+Step: 23200
+loss: 0.7613
+grad_norm: 27026.64453125
+learning_rate: 0.008840788840788842
+epoch: 1.6738816738816737
+
+Step: 23300
+loss: 0.7526
+grad_norm: 4538.89453125
+learning_rate: 0.008792688792688793
+epoch: 1.681096681096681
+
+Step: 23400
+loss: 0.757
+grad_norm: 13977.3232421875
+learning_rate: 0.008744588744588746
+epoch: 1.6883116883116882
+
+Step: 23500
+loss: 0.7583
+grad_norm: 7796.46337890625
+learning_rate: 0.008696488696488697
+epoch: 1.6955266955266954
+
+Step: 23600
+loss: 0.7924
+grad_norm: 4908.36669921875
+learning_rate: 0.008648388648388648
+epoch: 1.7027417027417027
+
+Step: 23700
+loss: 0.7695
+grad_norm: 9461.373046875
+learning_rate: 0.008600288600288601
+epoch: 1.70995670995671
+
+Step: 23800
+loss: 0.7644
+grad_norm: 47501.4140625
+learning_rate: 0.008552188552188552
+epoch: 1.7171717171717171
+
+Step: 23900
+loss: 0.7521
+grad_norm: 6915.234375
+learning_rate: 0.008504088504088504
+epoch: 1.7243867243867244
+
+Step: 24000
+loss: 0.7544
+grad_norm: 12998.96484375
+learning_rate: 0.008455988455988456
+epoch: 1.7316017316017316
+
+Step: 24100
+loss: 0.7443
+grad_norm: 6642.6171875
+learning_rate: 0.008407888407888408
+epoch: 1.7388167388167388
+
+Step: 24200
+loss: 0.7557
+grad_norm: 24634.751953125
+learning_rate: 0.008359788359788359
+epoch: 1.746031746031746
+
+Step: 24300
+loss: 0.7744
+grad_norm: 6406.51220703125
+learning_rate: 0.008311688311688312
+epoch: 1.7532467532467533
+
+Step: 24400
+loss: 0.7906
+grad_norm: 6206.93212890625
+learning_rate: 0.008263588263588265
+epoch: 1.7604617604617605
+
+Step: 24500
+loss: 0.8006
+grad_norm: 6129.17041015625
+learning_rate: 0.008215488215488216
+epoch: 1.7676767676767677
+
+Step: 24600
+loss: 0.7584
+grad_norm: 2382747.5
+learning_rate: 0.008167388167388167
+epoch: 1.774891774891775
+
+Step: 24700
+loss: 0.759
+grad_norm: 398291.8125
+learning_rate: 0.00811928811928812
+epoch: 1.7821067821067822
+
+Step: 24800
+loss: 0.7285
+grad_norm: 8457.779296875
+learning_rate: 0.008071188071188071
+epoch: 1.7893217893217894
+
+Step: 24900
+loss: 0.7006
+grad_norm: 43074.08203125
+learning_rate: 0.008023088023088024
+epoch: 1.7965367965367967
+
+Step: 25000
+loss: 0.6861
+grad_norm: 5532.9287109375
+learning_rate: 0.007974987974987975
+epoch: 1.8037518037518039
+
+Step: 25100
+loss: 0.6592
+grad_norm: 14944.2265625
+learning_rate: 0.007926887926887926
+epoch: 1.8109668109668111
+
+Step: 25200
+loss: 0.6522
+grad_norm: 5355.9970703125
+learning_rate: 0.00787878787878788
+epoch: 1.8181818181818183
+
+Step: 25300
+loss: 0.6447
+grad_norm: 22463.111328125
+learning_rate: 0.00783068783068783
+epoch: 1.8253968253968254
+
+Step: 25400
+loss: 0.6667
+grad_norm: 87595.3046875
+learning_rate: 0.0077825877825877824
+epoch: 1.8326118326118326
+
+Step: 25500
+loss: 0.6676
+grad_norm: 12935.5234375
+learning_rate: 0.007734487734487735
+epoch: 1.8398268398268398
+
+Step: 25600
+loss: 0.659
+grad_norm: 673009.9375
+learning_rate: 0.0076863876863876865
+epoch: 1.847041847041847
+
+Step: 25700
+loss: 0.6641
+grad_norm: 8026.8740234375
+learning_rate: 0.007638287638287639
+epoch: 1.8542568542568543
+
+Step: 25800
+loss: 0.6766
+grad_norm: 1529733.25
+learning_rate: 0.007590187590187591
+epoch: 1.8614718614718615
+
+Step: 25900
+loss: 0.6956
+grad_norm: 13459.1240234375
+learning_rate: 0.007542087542087543
+epoch: 1.8686868686868687
+
+Step: 26000
+loss: 0.6984
+grad_norm: 5496.47314453125
+learning_rate: 0.007493987493987494
+epoch: 1.8759018759018757
+
+Step: 26100
+loss: 0.6857
+grad_norm: 14076.654296875
+learning_rate: 0.007445887445887446
+epoch: 1.883116883116883
+
+Step: 26200
+loss: 0.6783
+grad_norm: 7849.08837890625
+learning_rate: 0.007397787397787398
+epoch: 1.8903318903318902
+
+Step: 26300
+loss: 0.6782
+grad_norm: 1438020.875
+learning_rate: 0.007349687349687349
+epoch: 1.8975468975468974
+
+Step: 26400
+loss: 0.6729
+grad_norm: 45139.2734375
+learning_rate: 0.007301587301587301
+epoch: 1.9047619047619047
+
+Step: 26500
+loss: 0.6713
+grad_norm: 83213.4765625
+learning_rate: 0.007253487253487253
+epoch: 1.9119769119769119
+
+Step: 26600
+loss: 0.6782
+grad_norm: 6742.939453125
+learning_rate: 0.007205387205387206
+epoch: 1.9191919191919191
+
+Step: 26700
+loss: 0.6783
+grad_norm: 59949.0
+learning_rate: 0.007157287157287158
+epoch: 1.9264069264069263
+
+Step: 26800
+loss: 0.6686
+grad_norm: 6358.646484375
+learning_rate: 0.007109187109187109
+epoch: 1.9336219336219336
+
+Step: 26900
+loss: 0.6545
+grad_norm: 6751.15283203125
+learning_rate: 0.007061087061087061
+epoch: 1.9408369408369408
+
+Step: 27000
+loss: 0.6629
+grad_norm: 3767.096435546875
+learning_rate: 0.007012987012987013
+epoch: 1.948051948051948
+
+Step: 27100
+loss: 0.6629
+grad_norm: 86660.890625
+learning_rate: 0.0069648869648869655
+epoch: 1.9552669552669553
+
+Step: 27200
+loss: 0.6519
+grad_norm: 29779.828125
+learning_rate: 0.006916786916786917
+epoch: 1.9624819624819625
+
+Step: 27300
+loss: 0.632
+grad_norm: 5081.318359375
+learning_rate: 0.006868686868686869
+epoch: 1.9696969696969697
+
+Step: 27400
+loss: 0.626
+grad_norm: 40519.6953125
+learning_rate: 0.006820586820586821
+epoch: 1.976911976911977
+
+Step: 27500
+loss: 0.6497
+grad_norm: 5709.54541015625
+learning_rate: 0.006772486772486772
+epoch: 1.9841269841269842
+
+Step: 27600
+loss: 0.6418
+grad_norm: 9655.220703125
+learning_rate: 0.006724386724386724
+epoch: 1.9913419913419914
+
+Step: 27700
+loss: 0.6602
+grad_norm: 6244.65283203125
+learning_rate: 0.006676286676286677
+epoch: 1.9985569985569986
+
+Step: 27720
+eval_loss: 0.5754761695861816
+eval_runtime: 345.9137
+eval_samples_per_second: 274.736
+eval_steps_per_second: 8.586
+epoch: 2.0
+
+Step: 27800
+loss: 0.6398
+grad_norm: 27473.701171875
+learning_rate: 0.006628186628186629
+epoch: 2.005772005772006
+
+Step: 27900
+loss: 0.6296
+grad_norm: 6187419.5
+learning_rate: 0.006580086580086581
+epoch: 2.012987012987013
+
+Step: 28000
+loss: 0.6306
+grad_norm: 5128.158203125
+learning_rate: 0.006531986531986532
+epoch: 2.0202020202020203
+
+Step: 28100
+loss: 0.619
+grad_norm: 23089.365234375
+learning_rate: 0.006483886483886484
+epoch: 2.0274170274170276
+
+Step: 28200
+loss: 0.6209
+grad_norm: 15039.705078125
+learning_rate: 0.006435786435786436
+epoch: 2.034632034632035
+
+Step: 28300
+loss: 0.6281
+grad_norm: 393932.25
+learning_rate: 0.006387686387686387
+epoch: 2.041847041847042
+
+Step: 28400
+loss: 0.6199
+grad_norm: 9214.5390625
+learning_rate: 0.0063395863395863394
+epoch: 2.0490620490620493
+
+Step: 28500
+loss: 0.6238
+grad_norm: 33584.61328125
+learning_rate: 0.0062914862914862915
+epoch: 2.0562770562770565
+
+Step: 28600
+loss: 0.606
+grad_norm: 163623.359375
+learning_rate: 0.0062433862433862435
+epoch: 2.0634920634920633
+
+Step: 28700
+loss: 0.6255
+grad_norm: 18354.76953125
+learning_rate: 0.006195286195286195
+epoch: 2.0707070707070705
+
+Step: 28800
+loss: 0.6258
+grad_norm: 160706.59375
+learning_rate: 0.006147186147186147
+epoch: 2.0779220779220777
+
+Step: 28900
+loss: 0.6292
+grad_norm: 49405.44140625
+learning_rate: 0.0060990860990861
+epoch: 2.085137085137085
+
+Step: 29000
+loss: 0.6225
+grad_norm: 112687.359375
+learning_rate: 0.006050986050986052
+epoch: 2.092352092352092
+
+Step: 29100
+loss: 0.6172
+grad_norm: 9075.396484375
+learning_rate: 0.006002886002886003
+epoch: 2.0995670995670994
+
+Step: 29200
+loss: 0.6201
+grad_norm: 4816.95751953125
+learning_rate: 0.005954785954785955
+epoch: 2.1067821067821066
+
+Step: 29300
+loss: 0.6125
+grad_norm: 1557623.125
+learning_rate: 0.005906685906685907
+epoch: 2.113997113997114
+
+Step: 29400
+loss: 0.607
+grad_norm: 5542.31982421875
+learning_rate: 0.005858585858585859
+epoch: 2.121212121212121
+
+Step: 29500
+loss: 0.6107
+grad_norm: 18645.455078125
+learning_rate: 0.00581048581048581
+epoch: 2.1284271284271283
+
+Step: 29600
+loss: 0.6185
+grad_norm: 25329.958984375
+learning_rate: 0.005762385762385762
+epoch: 2.1356421356421356
+
+Step: 29700
+loss: 0.6165
+grad_norm: 76961.9921875
+learning_rate: 0.005714285714285714
+epoch: 2.142857142857143
+
+Step: 29800
+loss: 0.6111
+grad_norm: 5308.150390625
+learning_rate: 0.0056661856661856655
+epoch: 2.15007215007215
+
+Step: 29900
+loss: 0.595
+grad_norm: 5720.43408203125
+learning_rate: 0.0056180856180856175
+epoch: 2.1572871572871573
+
+Step: 30000
+loss: 0.5979
+grad_norm: 4769.40576171875
+learning_rate: 0.00556998556998557
+epoch: 2.1645021645021645
+
+Step: 30100
+loss: 0.5987
+grad_norm: 166439.046875
+learning_rate: 0.0055218855218855225
+epoch: 2.1717171717171717
+
+Step: 30200
+loss: 0.6059
+grad_norm: 7878.54150390625
+learning_rate: 0.0054737854737854745
+epoch: 2.178932178932179
+
+Step: 30300
+loss: 0.5912
+grad_norm: 3885.779541015625
+learning_rate: 0.005425685425685426
+epoch: 2.186147186147186
+
+Step: 30400
+loss: 0.5957
+grad_norm: 33937.4765625
+learning_rate: 0.005377585377585378
+epoch: 2.1933621933621934
+
+Step: 30500
+loss: 0.5916
+grad_norm: 6188.31494140625
+learning_rate: 0.00532948532948533
+epoch: 2.2005772005772006
+
+Step: 30600
+loss: 0.6087
+grad_norm: 454818.9375
+learning_rate: 0.005281385281385282
+epoch: 2.207792207792208
+
+Step: 30700
+loss: 0.6036
+grad_norm: 167352.203125
+learning_rate: 0.005233285233285233
+epoch: 2.215007215007215
+
+Step: 30800
+loss: 0.5997
+grad_norm: 9845.0830078125
+learning_rate: 0.005185185185185185
+epoch: 2.2222222222222223
+
+Step: 30900
+loss: 0.6126
+grad_norm: 79849.0234375
+learning_rate: 0.005137085137085137
+epoch: 2.2294372294372296
+
+Step: 31000
+loss: 0.6117
+grad_norm: 796947.5
+learning_rate: 0.005088985088985088
+epoch: 2.236652236652237
+
+Step: 31100
+loss: 0.618
+grad_norm: 15079.1982421875
+learning_rate: 0.005040885040885041
+epoch: 2.243867243867244
+
+Step: 31200
+loss: 0.6361
+grad_norm: 4247.84619140625
+learning_rate: 0.004992784992784992
+epoch: 2.2510822510822512
+
+Step: 31300
+loss: 0.612
+grad_norm: 5850.5859375
+learning_rate: 0.004944684944684944
+epoch: 2.2582972582972585
+
+Step: 31400
+loss: 0.6068
+grad_norm: 64185.9609375
+learning_rate: 0.004896584896584897
+epoch: 2.2655122655122657
+
+Step: 31500
+loss: 0.597
+grad_norm: 25387.74609375
+learning_rate: 0.0048484848484848485
+epoch: 2.2727272727272725
+
+Step: 31600
+loss: 0.5871
+grad_norm: 6616.9990234375
+learning_rate: 0.0048003848003848005
+epoch: 2.27994227994228
+
+Step: 31700
+loss: 0.5912
+grad_norm: 21670.259765625
+learning_rate: 0.004752284752284753
+epoch: 2.287157287157287
+
+Step: 31800
+loss: 0.5865
+grad_norm: 6617.833984375
+learning_rate: 0.004704184704184704
+epoch: 2.2943722943722946
+
+Step: 31900
+loss: 0.587
+grad_norm: 16047.4658203125
+learning_rate: 0.004656084656084656
+epoch: 2.3015873015873014
+
+Step: 32000
+loss: 0.5877
+grad_norm: 7814.4150390625
+learning_rate: 0.004607984607984609
+epoch: 2.3088023088023086
+
+Step: 32100
+loss: 0.6021
+grad_norm: 15644.3369140625
+learning_rate: 0.00455988455988456
+epoch: 2.316017316017316
+
+Step: 32200
+loss: 0.6124
+grad_norm: 26507.7734375
+learning_rate: 0.004511784511784512
+epoch: 2.323232323232323
+
+Step: 32300
+loss: 0.5948
+grad_norm: 3841.940185546875
+learning_rate: 0.004463684463684464
+epoch: 2.3304473304473303
+
+Step: 32400
+loss: 0.5875
+grad_norm: 41961.81640625
+learning_rate: 0.004415584415584415
+epoch: 2.3376623376623376
+
+Step: 32500
+loss: 0.588
+grad_norm: 6178.62060546875
+learning_rate: 0.004367484367484368
+epoch: 2.344877344877345
+
+Step: 32600
+loss: 0.5832
+grad_norm: 8761.6826171875
+learning_rate: 0.004319384319384319
+epoch: 2.352092352092352
+
+Step: 32700
+loss: 0.5784
+grad_norm: 255734.671875
+learning_rate: 0.004271284271284271
+epoch: 2.3593073593073592
+
+Step: 32800
+loss: 0.5748
+grad_norm: 7152.134765625
+learning_rate: 0.004223184223184223
+epoch: 2.3665223665223665
+
+Step: 32900
+loss: 0.5668
+grad_norm: 7061.8408203125
+learning_rate: 0.004175084175084175
+epoch: 2.3737373737373737
+
+Step: 33000
+loss: 0.5608
+grad_norm: 4823.912109375
+learning_rate: 0.0041269841269841265
+epoch: 2.380952380952381
+
+Step: 33100
+loss: 0.5667
+grad_norm: 78749.421875
+learning_rate: 0.0040788840788840795
+epoch: 2.388167388167388
+
+Step: 33200
+loss: 0.5548
+grad_norm: 5151.095703125
+learning_rate: 0.004030784030784031
+epoch: 2.3953823953823954
+
+Step: 33300
+loss: 0.5495
+grad_norm: 162058.1875
+learning_rate: 0.003982683982683983
+epoch: 2.4025974025974026
+
+Step: 33400
+loss: 0.5579
+grad_norm: 4116.51318359375
+learning_rate: 0.003934583934583935
+epoch: 2.40981240981241
+
+Step: 33500
+loss: 0.5552
+grad_norm: 3930.324462890625
+learning_rate: 0.0038864838864838863
+epoch: 2.417027417027417
+
+Step: 33600
+loss: 0.5599
+grad_norm: 5946.5732421875
+learning_rate: 0.0038383838383838384
+epoch: 2.4242424242424243
+
+Step: 33700
+loss: 0.5644
+grad_norm: 21411.50390625
+learning_rate: 0.0037902837902837904
+epoch: 2.4314574314574315
+
+Step: 33800
+loss: 0.5491
+grad_norm: 1481371.25
+learning_rate: 0.0037421837421837425
+epoch: 2.4386724386724388
+
+Step: 33900
+loss: 0.5398
+grad_norm: 5849.73583984375
+learning_rate: 0.003694083694083694
+epoch: 2.445887445887446
+
+Step: 34000
+loss: 0.5497
+grad_norm: 8534.998046875
+learning_rate: 0.003645983645983646
+epoch: 2.4531024531024532
+
+Step: 34100
+loss: 0.5502
+grad_norm: 4071.009521484375
+learning_rate: 0.0035978835978835977
+epoch: 2.4603174603174605
+
+Step: 34200
+loss: 0.5405
+grad_norm: 21543.197265625
+learning_rate: 0.00354978354978355
+epoch: 2.4675324675324677
+
+Step: 34300
+loss: 0.5399
+grad_norm: 8204.52734375
+learning_rate: 0.003501683501683502
+epoch: 2.474747474747475
+
+Step: 34400
+loss: 0.5363
+grad_norm: 111961.0390625
+learning_rate: 0.003453583453583454
+epoch: 2.481962481962482
+
+Step: 34500
+loss: 0.5324
+grad_norm: 5985.04736328125
+learning_rate: 0.0034054834054834055
+epoch: 2.4891774891774894
+
+Step: 34600
+loss: 0.5239
+grad_norm: 21289.986328125
+learning_rate: 0.0033573833573833575
+epoch: 2.496392496392496
+
+Step: 34700
+loss: 0.521
+grad_norm: 246213.46875
+learning_rate: 0.003309283309283309
+epoch: 2.503607503607504
+
+Step: 34800
+loss: 0.5188
+grad_norm: 3889.20654296875
+learning_rate: 0.0032611832611832616
+epoch: 2.5108225108225106
+
+Step: 34900
+loss: 0.5159
+grad_norm: 9350.6865234375
+learning_rate: 0.0032130832130832132
+epoch: 2.5180375180375183
+
+Step: 35000
+loss: 0.5104
+grad_norm: 598532.875
+learning_rate: 0.0031649831649831653
+epoch: 2.525252525252525
+
+Step: 35100
+loss: 0.5099
+grad_norm: 10488.857421875
+learning_rate: 0.003116883116883117
+epoch: 2.5324675324675323
+
+Step: 35200
+loss: 0.5024
+grad_norm: 84635.6328125
+learning_rate: 0.0030687830687830685
+epoch: 2.5396825396825395
+
+Step: 35300
+loss: 0.5142
+grad_norm: 32873.24609375
+learning_rate: 0.0030206830206830205
+epoch: 2.5468975468975468
+
+Step: 35400
+loss: 0.5032
+grad_norm: 3758.743896484375
+learning_rate: 0.002972582972582973
+epoch: 2.554112554112554
+
+Step: 35500
+loss: 0.5029
+grad_norm: 8315.498046875
+learning_rate: 0.0029244829244829246
+epoch: 2.5613275613275612
+
+Step: 35600
+loss: 0.4956
+grad_norm: 10218.453125
+learning_rate: 0.0028763828763828762
+epoch: 2.5685425685425685
+
+Step: 35700
+loss: 0.5039
+grad_norm: 4942.57763671875
+learning_rate: 0.0028282828282828283
+epoch: 2.5757575757575757
+
+Step: 35800
+loss: 0.5023
+grad_norm: 48874.28125
+learning_rate: 0.00278018278018278
+epoch: 2.582972582972583
+
+Step: 35900
+loss: 0.5058
+grad_norm: 5655.1298828125
+learning_rate: 0.0027320827320827324
+epoch: 2.59018759018759
+
+Step: 36000
+loss: 0.5021
+grad_norm: 243414.21875
+learning_rate: 0.002683982683982684
+epoch: 2.5974025974025974
+
+Step: 36100
+loss: 0.4907
+grad_norm: 43894.56640625
+learning_rate: 0.002635882635882636
+epoch: 2.6046176046176046
+
+Step: 36200
+loss: 0.4897
+grad_norm: 3575.2490234375
+learning_rate: 0.0025877825877825876
+epoch: 2.611832611832612
+
+Step: 36300
+loss: 0.4859
+grad_norm: 17075.708984375
+learning_rate: 0.0025396825396825397
+epoch: 2.619047619047619
+
+Step: 36400
+loss: 0.4841
+grad_norm: 33669.1328125
+learning_rate: 0.0024915824915824917
+epoch: 2.6262626262626263
+
+Step: 36500
+loss: 0.4914
+grad_norm: 4005.45703125
+learning_rate: 0.0024434824434824433
+epoch: 2.6334776334776335
+
+Step: 36600
+loss: 0.4893
+grad_norm: 5549.46630859375
+learning_rate: 0.0023953823953823954
+epoch: 2.6406926406926408
+
+Step: 36700
+loss: 0.4849
+grad_norm: 7445.11328125
+learning_rate: 0.0023472823472823474
+epoch: 2.647907647907648
+
+Step: 36800
+loss: 0.4828
+grad_norm: 3973.748046875
+learning_rate: 0.002299182299182299
+epoch: 2.655122655122655
+
+Step: 36900
+loss: 0.4879
+grad_norm: 9559.4873046875
+learning_rate: 0.002251082251082251
+epoch: 2.6623376623376624
+
+Step: 37000
+loss: 0.4944
+grad_norm: 11666.994140625
+learning_rate: 0.002202982202982203
+epoch: 2.6695526695526697
+
+Step: 37100
+loss: 0.4949
+grad_norm: 180223.375
+learning_rate: 0.0021548821548821547
+epoch: 2.676767676767677
+
+Step: 37200
+loss: 0.4959
+grad_norm: 4279.37646484375
+learning_rate: 0.0021067821067821068
+epoch: 2.683982683982684
+
+Step: 37300
+loss: 0.481
+grad_norm: 27329.537109375
+learning_rate: 0.002058682058682059
+epoch: 2.691197691197691
+
+Step: 37400
+loss: 0.4813
+grad_norm: 7537.10986328125
+learning_rate: 0.0020105820105820104
+epoch: 2.6984126984126986
+
+Step: 37500
+loss: 0.4814
+grad_norm: 3861.878662109375
+learning_rate: 0.0019624819624819625
+epoch: 2.7056277056277054
+
+Step: 37600
+loss: 0.4808
+grad_norm: 3457.94140625
+learning_rate: 0.0019143819143819143
+epoch: 2.712842712842713
+
+Step: 37700
+loss: 0.4833
+grad_norm: 9276.6259765625
+learning_rate: 0.0018662818662818661
+epoch: 2.72005772005772
+
+Step: 37800
+loss: 0.484
+grad_norm: 12546.8125
+learning_rate: 0.0018181818181818182
+epoch: 2.7272727272727275
+
+Step: 37900
+loss: 0.4852
+grad_norm: 4238.1396484375
+learning_rate: 0.00177008177008177
+epoch: 2.7344877344877343
+
+Step: 38000
+loss: 0.486
+grad_norm: 4475.4658203125
+learning_rate: 0.001721981721981722
+epoch: 2.741702741702742
+
+Step: 38100
+loss: 0.4782
+grad_norm: 7231.57177734375
+learning_rate: 0.0016738816738816739
+epoch: 2.7489177489177488
+
+Step: 38200
+loss: 0.4798
+grad_norm: 3585.45849609375
+learning_rate: 0.0016257816257816257
+epoch: 2.756132756132756
+
+Step: 38300
+loss: 0.4753
+grad_norm: 408499.34375
+learning_rate: 0.0015776815776815778
+epoch: 2.763347763347763
+
+Step: 38400
+loss: 0.477
+grad_norm: 28772.67578125
+learning_rate: 0.0015295815295815296
+epoch: 2.7705627705627704
+
+Step: 38500
+loss: 0.4767
+grad_norm: 12324.5400390625
+learning_rate: 0.0014814814814814814
+epoch: 2.7777777777777777
+
+Step: 38600
+loss: 0.469
+grad_norm: 43601.03515625
+learning_rate: 0.0014333814333814335
+epoch: 2.784992784992785
+
+Step: 38700
+loss: 0.472
+grad_norm: 15177.4521484375
+learning_rate: 0.0013852813852813853
+epoch: 2.792207792207792
+
+Step: 38800
+loss: 0.4742
+grad_norm: 72296.9609375
+learning_rate: 0.001337181337181337
+epoch: 2.7994227994227994
+
+Step: 38900
+loss: 0.4712
+grad_norm: 174735.0625
+learning_rate: 0.0012890812890812892
+epoch: 2.8066378066378066
+
+Step: 39000
+loss: 0.4681
+grad_norm: 3993.914794921875
+learning_rate: 0.001240981240981241
+epoch: 2.813852813852814
+
+Step: 39100
+loss: 0.4697
+grad_norm: 6733.5205078125
+learning_rate: 0.001192881192881193
+epoch: 2.821067821067821
+
+Step: 39200
+loss: 0.465
+grad_norm: 4823.7333984375
+learning_rate: 0.0011447811447811449
+epoch: 2.8282828282828283
+
+Step: 39300
+loss: 0.4646
+grad_norm: 3742.11572265625
+learning_rate: 0.0010966810966810967
+epoch: 2.8354978354978355
+
+Step: 39400
+loss: 0.4618
+grad_norm: 274001.78125
+learning_rate: 0.0010485810485810485
+epoch: 2.8427128427128427
+
+Step: 39500
+loss: 0.4674
+grad_norm: 12950.296875
+learning_rate: 0.0010004810004810006
+epoch: 2.84992784992785
+
+Step: 39600
+loss: 0.4712
+grad_norm: 45306.7890625
+learning_rate: 0.0009523809523809524
+epoch: 2.857142857142857
+
+Step: 39700
+loss: 0.4599
+grad_norm: 4779.68359375
+learning_rate: 0.0009042809042809043
+epoch: 2.8643578643578644
+
+Step: 39800
+loss: 0.4569
+grad_norm: 3935.221923828125
+learning_rate: 0.0008561808561808563
+epoch: 2.8715728715728717
+
+Step: 39900
+loss: 0.4542
+grad_norm: 5683.01416015625
+learning_rate: 0.0008080808080808082
+epoch: 2.878787878787879
+
+Step: 40000
+loss: 0.4603
+grad_norm: 5889.6337890625
+learning_rate: 0.00075998075998076
+epoch: 2.886002886002886
+
+Step: 40100
+loss: 0.4485
+grad_norm: 34891.75
+learning_rate: 0.000711880711880712
+epoch: 2.8932178932178934
+
+Step: 40200
+loss: 0.4491
+grad_norm: 213371.59375
+learning_rate: 0.0006637806637806639
+epoch: 2.9004329004329006
+
+Step: 40300
+loss: 0.4497
+grad_norm: 10822.609375
+learning_rate: 0.0006156806156806157
+epoch: 2.907647907647908
+
+Step: 40400
+loss: 0.447
+grad_norm: 34970.1328125
+learning_rate: 0.0005675805675805675
+epoch: 2.9148629148629146
+
+Step: 40500
+loss: 0.447
+grad_norm: 3369.80224609375
+learning_rate: 0.0005194805194805195
+epoch: 2.9220779220779223
+
+Step: 40600
+loss: 0.4484
+grad_norm: 23205.9765625
+learning_rate: 0.0004713804713804714
+epoch: 2.929292929292929
+
+Step: 40700
+loss: 0.4484
+grad_norm: 14484.09375
+learning_rate: 0.00042328042328042324
+epoch: 2.9365079365079367
+
+Step: 40800
+loss: 0.4397
+grad_norm: 39618.14453125
+learning_rate: 0.0003751803751803752
+epoch: 2.9437229437229435
+
+Step: 40900
+loss: 0.4485
+grad_norm: 3804.509765625
+learning_rate: 0.00032708032708032706
+epoch: 2.950937950937951
+
+Step: 41000
+loss: 0.4442
+grad_norm: 2925.423095703125
+learning_rate: 0.000278980278980279
+epoch: 2.958152958152958
+
+Step: 41100
+loss: 0.4446
+grad_norm: 4236.2421875
+learning_rate: 0.00023088023088023088
+epoch: 2.965367965367965
+
+Step: 41200
+loss: 0.4453
+grad_norm: 4235.8486328125
+learning_rate: 0.0001827801827801828
+epoch: 2.9725829725829724
+
+Step: 41300
+loss: 0.4434
+grad_norm: 7564.37890625
+learning_rate: 0.00013468013468013467
+epoch: 2.9797979797979797
+
+Step: 41400
+loss: 0.4498
+grad_norm: 152926.84375
+learning_rate: 8.658008658008658e-05
+epoch: 2.987012987012987
+
+Step: 41500
+loss: 0.4451
+grad_norm: 3865.551513671875
+learning_rate: 3.848003848003848e-05
+epoch: 2.994227994227994
+
+Step: 41580
+eval_loss: 0.3634907901287079
+eval_runtime: 345.3504
+eval_samples_per_second: 275.184
+eval_steps_per_second: 8.6
+epoch: 3.0
+
+Step: 41580
+train_runtime: 13201.2257
+train_samples_per_second: 100.786
+train_steps_per_second: 3.15
+total_flos: 6.183168970928947e+16
+train_loss: 0.6780548685614222
+epoch: 3.0
+
+Step: 41580
+eval_loss: 0.3634907901287079
+eval_runtime: 347.1605
+eval_samples_per_second: 273.749
+eval_steps_per_second: 8.555
+epoch: 3.0
+
